@@ -50,6 +50,11 @@ class SAVE
 	static var currentData:Dynamic;
 	//---------------------------------------------------;
 	// --
+	/**
+	 * 
+	 * @param	saveName Unique game ID to associate with the game object
+	 * @param	maxUserSlots
+	 */
 	public static function init(saveName:String, maxUserSlots:Int = 1)
 	{
 		FLASH_SAVE_ID = "djflx" + saveName;
@@ -58,7 +63,10 @@ class SAVE
 		saveObj.bind(FLASH_SAVE_ID);
 		setSlot(0);             
 	}//---------------------------------------------------;
-	// --
+	/**
+	 * Set the current active slot for saving
+	 * @param	num The number of slot to set
+	 */
 	public static function setSlot(num:Int):Void
 	{
 		if (currentSlot == num) return;
@@ -79,72 +87,80 @@ class SAVE
 		
 		currentData = Reflect.getProperty(saveObj.data, '$PREFIX_SLOT$num');
 	}//---------------------------------------------------;
-	// --
-	// Save to the currently selected slot
+	/**
+	 * Save to the active save slot
+	 * @param	key The key of the save
+	 * @param	data The save data
+	 */
 	public static function save(key:String, data:Dynamic)
 	{
 		Reflect.setField(currentData, key, data);
 	}//---------------------------------------------------;
-	// --
-	// Load from the currently selected slot
-	// Null if nothing is found
+	/**
+	 * Load from the active save slot, returns Null if nothing is found
+	 * @param	key The key to load from
+	 * @return 
+	 */
 	public static function load(key:String):Dynamic
 	{
 		return Reflect.getProperty(currentData, key);
 	}//---------------------------------------------------;
-	// --
-	// Check from the currently selected slot
+	/**
+	 * Check from the active save slot
+	 * @param	key The Key to check
+	 * @return
+	 */
 	public static function exists(key:String):Bool
 	{
 		return Reflect.hasField(currentData, key);
 	}//---------------------------------------------------;
-	
-	// --
-	// Call this after a bulk save to force the data to be written
-	// REQUIRED FOR NON FLASH TARGETS ! !
+	/**
+	 * Call this after a bulk save to force the data to be written
+	 * REQUIRED FOR NON FLASH TARGETS ! !
+	 */
 	public static function flush():Void
 	{
 		saveObj.flush();
 	}//---------------------------------------------------;
 	
-	// --
-	// Completely delete the save game,
-	// This will delete both the game data and the settings
-	// Use something else if you want to delete just the save game.
+	/**
+	 * Completely delete the save game,
+	 * This will delete both the game data and the settings
+	 * Use something else if you want to delete just the save game.
+	 */
 	public static function deleteSave():Void
 	{	
 		saveObj.erase();
 		saveObj.flush();
 	}//---------------------------------------------------;
-	// -- Delete a save slot entirely.
+	/**
+	 * Delete a save slot entirely.
+	 * @param	num The slot no to delete
+	 */
 	public static function deleteSlot(num:Int)
 	{
 		Reflect.setProperty(saveObj.data, '$PREFIX_SLOT$num', { } );
 		currentData = Reflect.getProperty(saveObj.data, '$PREFIX_SLOT$num');
 	}//---------------------------------------------------;
-		
-	// --
-	// Save a target object as Stringified JSON
-	public static function saveStr(key:String, obj:Dynamic)
+	/**
+	 * Save a simple object as Stringified JSON to the active save slot
+	 * @param	key Key of the save id
+	 * @param	obj
+	 */
+	public static function saveJsonStr(key:String, obj:Dynamic)
 	{
 		save(key, Json.stringify(obj));
 	}//---------------------------------------------------;
 	
-	
-	// --
-	// Load a stringified string to an object
-	// Null if nothing is found
-	public static function loadStr(handle:String):Dynamic
+	/**
+	 * Load a stringified JSOn string from active slot and convert it to an object
+	 * @param	(key) Key of the save string
+	 * @return
+	 */
+	public static function loadJsonStr(key:String):Dynamic
 	{
-		if (!exists(handle)) return null;
-		return Json.parse(load(handle));
+		if (!exists(key)) return null;
+		return Json.parse(load(key));
 	}//---------------------------------------------------;
-	
-	
-	
-	// -- GAME SPECIFIC LOGIC -- //
-	
-	// - savegame() -> call all game objects to save
-	// - loadgame() -> call all game objects to load??
 	
 }// --

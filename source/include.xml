@@ -4,7 +4,6 @@
 	<!-- General -------->
 	
 	<set name="SWF_VERSION" value="20" /> <!-- default is 11.8 -->
-	
 	<window if="html5" resizable="false" />
 
 	<!-- DJFlixel --------->

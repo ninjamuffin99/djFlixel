@@ -5,12 +5,8 @@ import flixel.FlxG;
 
 /**
  * Sound Static class
- * Responsible for loading and playing sounds.
  * 
- * + Steamlined loading: You can bulk load sounds from the master JSON file
- * + Sound groups: You can declare many sounds to belong to a group, and then play one at random
- * + Simple one music track management
- * 
+ * - Handles sound metadata (volumes, grouping, quickIDs)
  */
 
 typedef SoundInfo = {
@@ -18,7 +14,6 @@ typedef SoundInfo = {
 	var file:String;	// File without the folder and filename
 	var asset:String; 	// Full asset of the sound. Precalculated on creation if null
 	var vol:Float;
-	var fast:Bool;
 	@:optional var group:String;
 }
  
@@ -49,6 +44,7 @@ class SND
 	
 	// --
 	// Preload and init the sounds
+	// @AUTOCALLED from FLS.hx
 	public static function init()
 	{
 		// Note: The Default groups are not destroyed in the lifetime of the app

@@ -1,5 +1,5 @@
 
-## djFlixel Tools
+## djFlixel
 
 **Version:** 0.3
 **Author:** John Dimitriadis, <johndimi@outlook.com>, Twitter<[@jondmt](https://twitter.com/jondmt)> 
@@ -11,7 +11,7 @@
 
 ### Some Features
 
-- **Menu System**,  Create easy paged menus with some basic option elements, like toggles and number selectors.
+- **Menu System**, Easily create paged menus with some basic option elements, like toggles and number selectors.
 - **Unified controls** for keyboard and gamepads. Poll keyboards and gamepad with one call.
 - **Visual Effects**, a collection of screen and sprite effects, like textscrollers, starfields, retroloader simulation etc.
 - Easy **Tiled Map** loading and handling map data of layers and sprites ( *docs and examples soon* )
@@ -19,12 +19,12 @@
 - Simple **Save system** with slots
 - Streamlined **TILED** maps loading , and easy map entities retrieval
 - Customizable Text **AutoType** system that supports inline tags
-- Τools like **AlignTool** (quickly align elements), **GfxTool** (useful bitmap functions)
-- More
+- Useful Global Τools like **AlignTool** (quickly align elements), **GfxTool** (useful bitmap functions) and more
+
 
 ### [Checkout the wiki](https://github.com/johndimi/djFlixel/wiki) on how to use and more details
 
-### Checkout a running DEMO over here : [http://johndimi.itch.io/djflixel-tools](http://johndimi.itch.io/djflixel) 
+### Checkout a running DEMO over here : [http://johndimi.itch.io/djflixel](http://johndimi.itch.io/djflixel) 
 
 [![Megademo](https://i.imgur.com/K71Ea6b.png)](http://johndimi.itch.io/djflixel)
 
@@ -92,10 +92,10 @@ Checkout the `dev` branch for latest updates. I have tried to provide examples a
 
 >**Note:** Not everything is documented and some parts need refactoring and re-design, This is a continuous work and somethings might change in the future !
 
-Feel free to open an issue/suggestion and contact me in social media and email. :smile: Donations are always welcome!
+Feel free to open an issue/suggestion and contact me on social media and email. :smile: Donations are always welcome!
 
 [![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.me/johndimi)
 
-Thanks for checking this out, cheers, 
+Thanks for checking this out,
 
-John
+John.
