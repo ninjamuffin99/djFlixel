@@ -18,7 +18,7 @@ import openfl.display.BitmapData;
  * remove the "EXTERNAL_LOAD" def and then it will load all the files from the internal assets
  * and not seek them externally
  * 
- * -- NOTE : Most of this class is roughly coded, just the json loading is curently working and useful
+ * -- NOTE : Most of this class is roughly coded, just the json loading is currently working and useful
  * 
  */
 class DynAssets

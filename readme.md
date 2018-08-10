@@ -1,10 +1,10 @@
 
 ## djFlixel
 
-**Version:** 0.3
-**Author:** John Dimitriadis, <johndimi@outlook.com>, Twitter<[@jondmt](https://twitter.com/jondmt)> 
-**Language:** Haxe 3.4 , __LICENCE__ :  MIT 
-**Requires:** HaxeFlixel 4.3.0 
+**Version:** 0.3.1\
+**Author:** John Dimitriadis, <johndimi@outlook.com>, Twitter<[@jondmt](https://twitter.com/jondmt)>\
+**Language:** Haxe 3.4 , __LICENCE__ :  MIT\
+**Requires:** HaxeFlixel 4.5.0
 
 **djFlixel** is a set of tools and helpers for [HaxeFlixel](https://github.com/HaxeFlixel/flixel). This is **NOT** a framework, you can easily use the parts you need in your existing projects.
 

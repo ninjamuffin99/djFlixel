@@ -33,11 +33,10 @@ class St_Boot extends FlxState
 		// --
 		var t = new FlxAutoText(2, 2, 230); add(t);
 		t.style = P.textStyle;
-
 		t.sound.char = "short2";
 		t.setCarrierSymbol(P.carrier);
-		t.start(P.text, next);
-		
+		t.start('(c30)djFlixel ${FLS.DJFLX_VERSION}\n(w2)Starting Demo (w2)(c4)...', next);
+
 	}//---------------------------------------------------;
 
 	// --

@@ -10,10 +10,11 @@ Some examples on how to use the `FlxMenu` class to create menus, add multiple el
 
 Showcase how you can alter the visual style of an `FlxMenu`, custom fonts, colors, etc.
 
-![](https://i.imgur.com/82J7uIf.png)
-^CustomStyleDemo^
-![](https://i.imgur.com/FkC7FZP.png)
-^CustomStyleDemo^
+![](https://i.imgur.com/82J7uIf.png)\
+*CustomStyleDemo*
+
+![](https://i.imgur.com/FkC7FZP.png)\
+*CustomStyleDemo*
 
 
 ### Functionality Demos

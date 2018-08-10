@@ -3,6 +3,7 @@ package djFlixel;
 
 import djFlixel.gui.Gui;
 import djFlixel.gui.Styles;
+import djFlixel.tool.MacroHelp;
 import flixel.FlxG;
 import flixel.FlxObject;
 import djFlixel.tool.DynAssets;
@@ -34,7 +35,7 @@ class FLS
 	//====================================================;
 	
 	// 
-	public inline static var DJFLX_VERSION:String = "0.3";
+	public inline static var DJFLX_VERSION:String = MacroHelp.getDefine("DJFLX_VER");
 	
 	// -- Parameters file --
 	// -  It is useful to have various game parameters to an external file

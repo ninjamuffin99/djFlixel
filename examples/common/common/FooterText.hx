@@ -31,7 +31,7 @@ class FooterText
 		});
 		
 		var url = "https://www.twitter.com/jondmt";
-		var str = 'DjFlixel 0.3, johndimi, 2018';
+		var str = 'djFlixel ${FLS.DJFLX_VERSION} johndimi, 2018';
 		var text = new FlxText(P.x,P.y);
 			//text.font = "fonts/pixelarial";
 			//text.fontSize = 8;

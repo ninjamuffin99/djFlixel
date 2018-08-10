@@ -16,8 +16,8 @@ Some examples from objects in the `djFlixel.gui` package.
 - `VListNav` : Extends the previous list and adds item navigation and interaction
 
 
-![UIButtons Demo](https://i.imgur.com/utuSPgT.png)
-^UiButtons^
+![UIButtons Demo](https://i.imgur.com/utuSPgT.png)\
+*UiButtons*
 
-![Toast Notifications Demo](https://i.imgur.com/zF8eAHw.png)
-^ToastNotifications^
+![Toast Notifications Demo](https://i.imgur.com/zF8eAHw.png)\
+*ToastNotifications*

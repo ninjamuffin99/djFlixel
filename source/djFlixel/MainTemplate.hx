@@ -21,11 +21,19 @@ class MainTemplate extends Sprite
 	var SKIP_SPLASH:Bool = true;
 	var INITIAL_STATE:Class<FlxState>;
 	
+	// For some strange reason the main class is fired two times causing bugs
+	// ( haxe 3.4.7 | openfl 8.4.0 | lime 7.0.0 | flixel 4.5.0 )
+	static var bugfix_runonce:Bool = false;
+
 	/**
 	 */
 	public function new()
 	{
+		if (bugfix_runonce) return;
+			bugfix_runonce = true;
+			
 		super();
+		
 		// Dynamic Assets init
 		FLS.assets = new DynAssets();
 		// Initialize User
@@ -33,10 +41,10 @@ class MainTemplate extends Sprite
 		// The default main parameters file
 		FLS.assets.add(FLS.PARAMS_ASSET);
 		// This is Async, will call setupGame when all files are loaded
+		
 		FLS.assets.loadFiles(setupGame);
 	}//---------------------------------------------------;
 
-	
 	/**
 	 * OVERRIDE THIS to set running parameters
 	 */
@@ -59,10 +67,11 @@ class MainTemplate extends Sprite
 	}//---------------------------------------------------;
 	
 	
-	// --
+	/**
+	   Autocalled when all Dynamic Assets load ( if any )
+	**/
 	function setupGame():Void
 	{
-		//-- Try to get the initial state to boot
 		FLS.JSON = FLS.assets.json.get(FLS.PARAMS_ASSET);
 
 		#if debug
@@ -85,7 +94,6 @@ class MainTemplate extends Sprite
 			if (FLS.extendedClass == null) FLS.extendedClass = FLS;
 			Type.createInstance(FLS.extendedClass, []);
 		});
-		
 		
 		addChild(new FlxGame(RENDER_WIDTH, RENDER_HEIGHT, INITIAL_STATE, ZOOM, FPS, FPS, SKIP_SPLASH));
 		

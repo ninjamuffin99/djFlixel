@@ -24,7 +24,6 @@
 	"St_Boot" : 
 	{
 		"colorBG" : "@A16[1]",
-		"text" : "(c30)djFlixel 0.3 \n(w2)Starting Demo (w2)(c4)...",
 		"carrier" : "_",
 		"noise" : { "color1" : "0xFF111111", "color2" : "0xFF222222" },
 		"textStyle" : {
@@ -78,7 +77,7 @@
 		
 
 		"sineText": 
-			"djFlixel 0.3 tools and helpers for haxeflixel (like this sine-text scroller) Following is a selection of interactive demos.",
+			"tools and helpers for haxeflixel (like this sine-text scroller) Following is a selection of interactive demos.",
 			
 		"sineParams":
 		{	"color":"@DB32[21]",

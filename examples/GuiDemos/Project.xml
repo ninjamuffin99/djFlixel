@@ -59,7 +59,6 @@
 	<!-- LIBRARIES ------------->
 	<haxelib name="djFlixel"/>
 	<haxelib name="flixel"/>
-	
 	<!-- Note: 	Many common defines are being declared in the "djflixel/source/include.xml" file
 				This is to save space and streamline the project.xml file a bit -->
 

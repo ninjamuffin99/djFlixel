@@ -62,7 +62,8 @@ class St_Intro2 extends FlxState
 			
 		case 5:
 			// Sine Text Scroller
-			var ts = new TextScroller(P.sineText, seq.nextF, P.sineParams);
+			var t_ = "djFlixel " + FLS.DJFLX_VERSION + " " + P.sineText;
+			var ts = new TextScroller(t_, seq.nextF, P.sineParams);
 			add(ts);
 			
 			// --

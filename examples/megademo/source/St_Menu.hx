@@ -80,7 +80,7 @@ class St_Menu extends FlxState
 		menu.callbacks = menuCallbacks;
 		menu.applyMenuStyle(P.menu.style, P.menu.header);
 		// -- Create the page
-		var p = menu.newPage("main", {title:"djFlixel 0.3"});
+		var p = menu.newPage("main", {title:"djFlixel " + FLS.DJFLX_VERSION});
 		
 		p.link("FlxMenu Demos", "flxm");
 		p.link("Gui Package Demos", "gui");

@@ -5,8 +5,9 @@
 
 ### MEGADEMO
 
-![](https://i.imgur.com/RapofVf.png)
+![](https://i.imgur.com/RapofVf.png)\
 All around, general demonstration of the library.
+Basically it's all the other examples bundled in a single executable & a starting intro.
 Checkout a `flash` build over here : [johndimi.itch.io/djflixel](https://johndimi.itch.io/djflixel)
 
 ### FlxMenu Demos

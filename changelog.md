@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Version 0.3.1 ( to be pushed to main branch )
+	
+	- Support Haxe 4.0.0 Preview
+	- Support HaxeFlixel 4.5, Lime 7.0, OpenFl 8.0
+	
+
 ## Version 0.3  | *2018 January 26*
 
 > Breaking Changes
