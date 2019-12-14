@@ -1,12 +1,13 @@
 {
   "name": "djFlixel",
-  "url" : "https://github.com/johndimi/djFlixel",
+  "url" : "https://github.com/ninjamuffin99/djFlixel",
   "license": "MIT",
   "tags": ["flixel"],
   "description": "Set of tools and helpers for HaxeFlixel",
   "version": "0.3.1",
   "releasenote": "2018 Improved Release",
   "contributors": ["JohnDimi"],
+  "classPath": "source",
   "dependencies": {
     "flixel": ""
   }
