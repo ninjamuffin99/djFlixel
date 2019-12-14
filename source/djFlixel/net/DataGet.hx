@@ -30,14 +30,14 @@ class DataGet
 	public var onLoad:Dynamic->Void = null;	
 	// Called when error occured, # passthrough for the ldata.onError
 	public var onError:Int->Void = null;
-
+	
 	// The data loaded, This is the var to read when loader is loaded
 	public var data(default, null):Dynamic;
-	public var type(default, null):String = "text";	// binary,text,json,image
+	// Will be populated with [binary,text,json,image] once the url loads
+	public var type(default, null):String = "text";
 	
 	// Whether this is loaded or not.
 	public var isLoaded(default, null):Bool;
-	
 	//-- Set to true to force loading a text file as binary
 	public var flag_force_binary:Bool = false;
 	
